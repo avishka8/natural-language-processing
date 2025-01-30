@@ -1,0 +1,21 @@
+text=("I can't wait for my birthday!",
+    "The COVID-19 pandemic has affected millions of people.",
+    "www.youtube.com is my favourite place to watch videos."
+    "Football has to be # the best sport ever",
+    "<html><body>Welcome to the website!</body></html>",
+    "Python is a great programming language!!! ??")
+
+#removing punctuations
+#import re
+#import string
+#text= text.translate(str.maketrans('','', string.punctuation))
+
+#tokenization
+import re
+import nltk
+from nltk.tokenize import word_tokenize
+nltk.download('punkt')
+
+tokenized_text = [word_tokenize(doc) for doc in text]
+print(tokenized_text)
+
